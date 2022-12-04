@@ -1,31 +1,30 @@
 #include <iostream>
 #include <fstream>
-#include <list>
+#include <vector>
 
-std::list<std::string> read_input() {
-    std::list<std::string> input;
+void read_input(std::vector<std::string> &inputVec) {
     std::ifstream inputFile("input.txt");
     std::string nextLine;
 
-    while (std::getline(inputFile, nextLine)) input.push_back(nextLine);
+    while (std::getline(inputFile, nextLine)) inputVec.push_back(nextLine);
     inputFile.close();
-
-    return input;
 }
 
 void taskOne() {
-    std::list<std::string> input = read_input();
+    std::vector<std::string> inputVec;
+    read_input(inputVec);
 
-    for (std::list<std::string>::iterator in = input.begin(); in != input.end(); in++) {
-        std::string line = *in;
+    for (std::string line : inputVec) {
+
     }
 }
 
 void taskTwo() {
-    std::list<std::string> input = read_input();
+    std::vector<std::string> inputVec;
+    read_input(inputVec);
 
-    for (std::list<std::string>::iterator in = input.begin(); in != input.end(); in++) {
-        std::string line = *in;
+    for (std::string line : inputVec) {
+        
     }
 }
 
