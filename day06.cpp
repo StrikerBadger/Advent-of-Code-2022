@@ -10,9 +10,7 @@ void read_input(std::vector<std::string> &inputVec) {
     inputFile.close();
 }
 
-void taskOne() {
-    std::vector<std::string> inputVec;
-    read_input(inputVec);
+void taskOne(std::vector<std::string> &inputVec) {
     std::string line = inputVec.at(0);
     int i;
 
@@ -40,9 +38,7 @@ void taskOne() {
     std::cout << i+4 << std::endl;
 }
 
-void taskTwo() {
-    std::vector<std::string> inputVec;
-    read_input(inputVec);
+void taskTwo(std::vector<std::string> &inputVec) {
     std::string line = inputVec.at(0);
     int i;
 
@@ -70,9 +66,12 @@ void taskTwo() {
 }
 
 int main(int argc, char *argv[]) {
+
+    std::vector<std::string> inputVec;
+    read_input(inputVec);
     
-    taskOne();
-    taskTwo();
+    taskOne(inputVec);
+    taskTwo(inputVec);
 
     return 0;
 }
